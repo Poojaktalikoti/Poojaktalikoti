@@ -63,7 +63,7 @@ public class Hospital {// one to many bcoz we can add more elements
 	}
 	
 	
-	public Gender getPatientGender(Gender patientGender) {
+	public Gender getPatientGenderByName(Gender patientGender) {
 		System.out.println("inside getPatientByGender()..");
 		for (int i = 0; i < patientDTO.length; i++) {
 			if((patientDTO[i]).getGender()==patientGender) {
@@ -76,7 +76,7 @@ public class Hospital {// one to many bcoz we can add more elements
 		return patientGender;
 	}
 
-		public int getPatientAge(int patientAge) {
+		public int getPatientAgeByName(int patientAge) {
 		System.out.println("inside getPatientByGender()..");
 		for (int i = 0; i < patientDTO.length; i++) {
 			if(patientDTO[i].getContactNumber()==patientAge) {
@@ -89,24 +89,24 @@ public class Hospital {// one to many bcoz we can add more elements
 		return patientAge;
 	}
 
-	public long getPatientContact(long patientContact) {
+	public String getPatientContactNumberByName(String patientName, long PatientName) {
 		System.out.println("inside getPatientByGender()..");
 		for (int i = 0; i < patientDTO.length; i++) {
-			if(patientDTO[i].getContactNumber()==patientContact) {
+			if(patientDTO[i].getContactNumber()==PatientName) {
 				System.out.println("patient gender : " + patientDTO[i].getContactNumber());
 			}
 			else {
-				System.out.println("patient gender :" + patientContact+" is not available");
+				System.out.println("patient gender :" + patientName+" is not available");
 			}
 		}
-		return patientContact;
+		return patientName;
 	}
 
 	public int getPatientNameById(int patientId) {
 		System.out.println("inside getPatientIdByName()..");
 		for (int i = 0; i < patientDTO.length; i++) {
 			if(patientDTO[i].getpatientId()==patientId) {
-				System.out.println("patient id:"+patientDTO[i].getpatientId() + "," + "patient name:"+patientDTO[i].getPatientName());
+				System.out.println("patient id:"+patientDTO[i].getpatientId() + "," + "patient name:"+patientDTO[i].getpatientName());
 			}
 			else {
 					System.out.println("patient id :"+patientId+" is not available");
@@ -114,9 +114,37 @@ public class Hospital {// one to many bcoz we can add more elements
 		}
 		return patientId;
 	}
+
+	
+	public long getPatientIdByName(long patientName) {
+		System.out.println("inside getPatientIdByName()..");
+		for (int i = 0; i < patientDTO.length; i++) {
+			if(patientDTO[i].getpatientName().equals(patientName)) {
+				System.out.println("patient name:"+patientDTO[i].getpatientName() + "," + "patient ID:"+patientDTO[i].getpatientId());
+			}
+			else {
+					System.out.println("patient id :"+patientName+" is not available");
+			}
+		}
+		return patientName;
+	}
+
+	public Gender getGenderByName(String patientName, Gender gender) {
+		System.out.println("inside getPatientIdByName()..");
+		for (int i = 0; i < patientDTO.length; i++) {
+			if(patientDTO[i].getpatientName().equals(patientName)) {
+				System.out.println("patient name:"+patientDTO[i].getpatientName()+ "," +"patient address:"+patientDTO[i].getGender() );
+			}
+			else {
+					System.out.println("patient id :"+patientName+" is not available");
+			}
+		}
+		return gender;
+	}
 	
 	
 	public boolean updateContactNoBypatientName(long contactNo,String patientName) {
+	
 		System.out.println("invoked updateContactNoBypatientName()");
 		System.out.println("1st arg : contactno:" + contactNo);
 		boolean isContactNoUpdated=false;
@@ -129,9 +157,13 @@ public class Hospital {// one to many bcoz we can add more elements
 			else {
 				System.out.println("contact number is not updated");
 			}
-			return isContactNoUpdated;
+			
 		}
-	return false;
+		return isContactNoUpdated;
+	}
+	public void getPatientNameById(String next) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
