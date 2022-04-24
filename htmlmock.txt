@@ -1,0 +1,120 @@
+1:Basic structure of HTML
+ANS:<!doctype html>
+<html></html>
+<head></head>
+<body></body>
+
+2:Attributes is a piece of markup language 
+used to adjust the behavior or disply of an HTML element.
+Synatx: attribute_name="value">Content</tag_name>
+
+
+3:Synatx for image tag:
+	<body>
+		<img src="path of an image" width="120" height="70" alt="natural"/>
+
+		</body>
+
+
+4:Hyperlink is an icon,graphic,or text that links to another file or object.
+Synatx:
+	<a href="url">link text</a>
+example:
+<a>
+	 href="https://www.w3schools.com/"
+	target="_blank">visit w3School!
+</a>
+
+5:<!doctype html>
+<html></html>
+<head></head>
+<title></title>
+<body>
+    <!---- from in html--->
+    <form>
+        <div>
+            <label>Enter name</label>
+            <input type="text"value="Pooja">
+        </div></br>
+
+
+        <div>
+            <label> Enter Password</label>
+            <input type="Password">
+        </div>
+
+        <div>
+            <label>Gender</label>
+            <input type="radio"name="gender">male
+            <input type="radio"name="gender">female
+        </div>
+
+        <div>
+            <label>Undergraduvate</label>
+            <select name="degree">
+                <option name="Bachelor of Computer Application">BCA</option>
+                <option>Bsc</option>
+                <option>BBM</option>
+                <option>Bcom</option>
+             </select>
+        </div>
+
+        <div>
+            <label>Date Of Birth</label>
+            <input type="date">
+         </div>
+
+
+         <div>
+            <label>Age</label>
+            <input type="Number">
+         </div>
+
+
+CSS
+1:Types of CSS 
+	1.Inline
+	2.internal
+	3.external
+
+2:CSS selector uses the id attribute of an HTML
+element to select a specific element
+
+3.box module HTML
+<!doctype html>
+<html>
+    <link rel="stylesheet" href="boxModel.css">
+    <head>
+        <body>
+            
+<div class="box">Css Box Model</div>
+<div class="box1"></div>
+<div class="box2//"></div>
+
+
+        </body>
+    </head>
+</html>
+
+Box module css
+.box{
+    background-color: red;
+    height: 100px;
+    margin: 100px;
+    border: 2px solid black;
+    padding-left: 100px;
+}
+
+body{
+    margin: 60;
+}
+.box1{
+    background-color: blue;
+    height: 50px;
+    margin: 30px;
+    border: 3px solid greenyellow;
+}
+.box2{
+    border: 2px solid yellow;
+}
+<body>
